@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <!--Al introducir estilos prevalece el orden en el que introduzcas los links-->
+    
+    <!-- Link compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Libreria compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+     <!--Link estilos-->
+     <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body  >
+ 
+<!--Como hacer que suceda algo al clickar(javascritp)-->    
+<h1 onclick="alert('Has clicado');">Soy un título</h1>
+<!--Doble click ,en este ejemplo seguimos con etiqueta en línea-->
+<h2 ondblclick="alert('Has vuelto a clicar,pero dos veces')">Soy un subtítulo</h2>
+<!--Con funcion desde script llamando a la función envia-->
+<h3 ondblclick="envia()">Seguimos probando</h3>
+<!--Desde otra función declarada dentro de script-->
+<h4>Evento desde una función</h4>
+
+<div id="contenido"></div>
+
+<h5>Esto tiene estilo</h5>
+
+
+
+<!--Link jquery-->
+<script type="text/javascript" src="jquery.min.js"></script>
+<!--Link funciones javascript-->
+<script src="funciones.js"></script>
+
+<!--En este caso hemos puesto h4 pero podemos poner cualquier etiqueta o con . y # si es una clase o un id-->
+<script>
+
+    $("h4").click(envia);
+
+    $("#contenido").html("<h1>Bea</h1>");
+   
+    function envia(){
+        alert("Hola");
+    }
+</script>
+
+
+
+</body>
+</html>
